@@ -1,1 +1,175 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Mia Hofmann</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    
+    <!-- embedded p5.js code for home page interaction-->
+    <script>
+        var font;
+        var value = 0;
+        var fade;
+        var fadeAmount = 1;
+        var circles = [];
+
+
+        function preload() {        
+            fade = 150;
+        }
+
+        function windowResized(){
+          resizeCanvas(windowWidth, windowHeight);
+        }
+
+        function setup() {
+        var canvas = createCanvas(windowWidth, 818);
+        canvas.parent('sketch-holder');
+        
+        r = 255;
+        g = 255;
+        b = 255;
+        
+        background(0);
+        }
+
+        function draw() {
+        clear();
+ 
+        circles.push({x: mouseX, y: mouseY});
+        
+        var dimming = 0;
+        
+        for(var i=circles.length -1 ; i >= 0; i--){
+            variableEllipse(circles[i].x, circles[i].y, 50 - dimming);
+            dimming += 1;
+            
+        }
+        
+        if(circles.length > 50){
+            circles = circles.slice(-50, -1)
+        }
+        }
+
+        //brush
+        function variableEllipse(x, y, opacity) {
+        fill(r, g, b, opacity);
+        strokeWeight(0);
+        ellipse(x, y, 80, 80);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id = "sketch-holder">
+
+    </div>
+    <div class = "top-container">
+        <nav class = "site-header ">
+            <div class = "site-header container nav-flex">
+                <a class = "left-nav text-white" href="index.html">Mia <em>Hofmann</em></a>
+                <a class = "right-nav at-index text-white" href="index.html">Work</a>
+                <a class = "right-nav text-white" href="about.html">About</a>
+            </div>
+        </nav>
+
+        <!-- top of homepage -->
+        <div>
+        <div  class="position-relative overflow-hidden text-center header-container">
+            <div class="col-md-5 p-lg-5 mx-auto my-5 text-white">
+              <h1 class="display-4 font-weight-normal">Hi, I'm <b>Mia</b></h1>
+              <p class="lead font-weight-normal">A product designer striving to make
+                our digital world a better place.</p>
+            </div>
+        </div>     
+        <footer class="container py-5 border-top border-white" ></footer>    
+
+          <div class="container" style="margin-top:40px">
+            <div class="row">
+              <div class="col-md-8">
+                <a href='single_page1.html'><img class="image-style" src="assets/images/p1.png" alt="portfolo thumbnail 1"></a>
+              </div>
+      
+        <!-- single portfolio pieces -->
+              <div class="col-lg-4 text-white">
+                <h2 style="margin-top: 30px">PORTFOLIO PIECE 1</h2>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <a href='single_page1.html'>SEE CASE STUDY</a>
+                <br>
+                </div>
+            </div>
+          </div>
+
+          <div class="container" style="margin-top: 150px">
+            <div class="row">
+              <div class="col-lg-8">
+                <a href='#'><img class = "image-style" src="assets/images/p2.png" alt="portfolo thumbnail 2"></a>
+              </div>
+
+              <div class="col-lg-4 text-white">
+                <h2 style="margin-top: 30px">PORTFOLIO PIECE 2</h2>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <a href='#'>SEE CASE STUDY</a>
+                <br>
+                </div>
+            </div>
+            </div>
+
+            <div class="container" style="margin-top: 150px">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <a href='#'><img class = "image-style" src="assets/images/p3.png" alt="portfolo thumbnail 3"></a>
+                 </div>
+    
+                  <div class="col-lg-4 text-white">
+                    <h2 style="margin-top: 30px">PORTFOLIO PIECE 3</h2>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <a href='#'>SEE CASE STUDY</a>
+                    <br>
+                    </div>
+                </div>
+                </div>
+    </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="container py-5 border-top border-white" style="margin-top: 150px">
+        <div class="row">
+          <div class="col-6 col-md">
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white footer-text" href="#">Copyrights @ 2021 Mia Hofmann </br> All rights reserved.</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md">
+            <ul class="list-unstyled text-small">
+
+            </ul>
+          </div>
+          <div class="col-2 col-md">
+            <ul class="list-unstyled text-small">
+                <li><a class="text-white footer-text" href="#">Email</a></li>
+                <li><a class="text-white footer-text" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-2 col-md">
+            <ul class="list-unstyled text-small">
+                <li><a class="text-white footer-text" href="#">Instagram</a></li>
+                <li><a class="text-white footer-text" href="#">Medium</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
