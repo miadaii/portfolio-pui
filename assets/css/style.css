@@ -4,8 +4,7 @@ body{
     font-family: 'Gopher', 'Fraunces';
     font-weight: normal;
     color: rgba(0,0,0,0.85);
-    background: radial-gradient(76.53% 151.34% at 9.79% 31.15%, #EFA895 0%, #E0C6B3 29.56%, #D4D4D7 100%);
-}
+    background: radial-gradient(52.44% 102.89% at 20.26% 9.17%, #799395 25%, #9AACB0 79.69%);}
 
 a{
     color: white;
@@ -172,7 +171,7 @@ p{
   }
   
   .top-container1{
-    background: url(../images/h1.jpg) no-repeat top;
+    background: url(../images/purple.jpeg) no-repeat top;
     background-size: cover;
 
     /* position:relative; */
