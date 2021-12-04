@@ -3,11 +3,11 @@
 body{
     font-family: 'Gopher', 'Fraunces';
     font-weight: normal;
-    color: rgba(0,0,0,0.85);
+    color:#4D4D4D;
     background: radial-gradient(52.44% 102.89% at 20.26% 9.17%, #799395 25%, #9AACB0 79.69%);}
 
 a{
-    color: white;
+    color: #4D4D4D;
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -15,7 +15,7 @@ a{
   }
 
 a:hover{
-    color: white;
+    color: #4D4D4D;
     text-decoration: none;
 }
 
@@ -95,21 +95,20 @@ h2{
 /* button styles */
 a.button {
     padding:0.4em 2.5em;
-    border:0.16em solid #FFFFFF;
+    border:0.16em solid #4D4D4D;
     margin:0 0.3em 0.3em 0;
     font-size: 13px;
     box-sizing: border-box;
     text-decoration:none;
     text-transform:uppercase;
     font-weight:400;
-    color:#FFFFFF;
+    color:#4D4D4D;
     text-align:center;
     float:right;  
     margin-right: 80px;
 }
   
   .button:hover{
-    /* background-color:white; */
     color: #7e878a;
     border-color:#7e878a;  
 }
@@ -171,7 +170,7 @@ p{
   }
   
   .top-container1{
-    background: url(../images/purple.jpeg) no-repeat top;
+    background: url(../images/h1.jpg) no-repeat top;
     background-size: cover;
 
     /* position:relative; */
@@ -219,6 +218,10 @@ p{
     max-width: 100%;
 }
 
+.format-play{
+    font-size: 15px;
+}
+
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
     .div-container{
@@ -247,8 +250,8 @@ p{
         margin: auto;
     }
 
-    .image-style{s
-        margin: auto;
+    .image-style{
+        margin-left: 65px;
     }
 
     .format-play{
